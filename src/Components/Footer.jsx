@@ -1,7 +1,10 @@
 import { HeartIcon, GlobeIcon } from "@radix-ui/react-icons";
 import { Github, Linkedin, X as XIcon, FileText } from "lucide-react";
+import { useLocation } from "react-router-dom";
 
 export default function Footer() {
+  const location = useLocation();
+
   return (
     <footer className="bg-gray-950 text-white py-12 border-t border-white/5">
       <div className="max-w-6xl mx-auto px-4 flex flex-col md:flex-row justify-between items-center gap-8">
@@ -9,9 +12,9 @@ export default function Footer() {
         <div className="hidden md:block">
           <p className="font-bold text-lg mb-4 text-[#38bdf8]">Quick Links</p>
           <ul className="grid grid-cols-2 gap-x-8 gap-y-2 text-sm">
-            <li><a className="text-gray-400 hover:text-white transition-colors" href="#projects">Projects</a></li>
+            <li><a className="text-gray-400 hover:text-white transition-colors" href={location.pathname === "/" ? "#projects" : "/#projects"}>Projects</a></li>
             <li><a className="text-gray-400 hover:text-white transition-colors" href="/certifications">Certifications</a></li>
-            <li><a className="text-gray-400 hover:text-white transition-colors" href="#wall-of-fame">Wall of Fame</a></li>
+            <li><a className="text-gray-400 hover:text-white transition-colors" href={location.pathname === "/" ? "#wall-of-fame" : "/#wall-of-fame"}>Wall of Fame</a></li>
             <li><a className="text-gray-400 hover:text-white transition-colors" href="/terminal">Terminal</a></li>
           </ul>
         </div>

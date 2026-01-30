@@ -1,7 +1,9 @@
 import React from 'react'
-import { Link } from 'react-router-dom'
+import { Link, useLocation } from 'react-router-dom'
 
 function Dropdown({ setDrop }) {
+  const location = useLocation();
+
   return (
     <div className="fixed top-16 mx-auto w-screen backdrop-blur-md bg-black/50 rounded-md flex flex-col items-center gap-2 popin py-4 audiowide-regular" onClick={() => setDrop(false)}>
       <span
@@ -11,19 +13,19 @@ function Dropdown({ setDrop }) {
         <Link to={"/"}>Home</Link>
       </span>
       <a
-        href="#wall-of-fame"
+        href={location.pathname === "/" ? "#wall-of-fame" : "/#wall-of-fame"}
         className="hover:text-[#38bdf8] p-4 hover:rounded-lg"
       >
         Wall of Fame
       </a>
       <a
-        href="#skills"
+        href={location.pathname === "/" ? "#skills" : "/#skills"}
         className="hover:text-[#38bdf8] p-4 hover:rounded-lg"
       >
         Skills
       </a>
       <a
-        href="#projects"
+        href={location.pathname === "/" ? "#projects" : "/#projects"}
         className="hover:text-[#38bdf8] p-4 hover:rounded-lg"
       >
         Projects

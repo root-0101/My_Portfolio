@@ -66,7 +66,7 @@ function Navbar() {
             ) : (
               <a
                 key={link.name}
-                href={link.path}
+                href={location.pathname === "/" ? link.path : `/${link.path}`}
                 className="px-4 py-2 rounded-full text-sm font-medium text-gray-300 transition-all duration-300 hover:bg-[#38bdf8]/10 hover:text-[#38bdf8]"
               >
                 {link.name}
