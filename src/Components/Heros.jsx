@@ -3,7 +3,7 @@ import { Github, Mail, FileText } from "lucide-react";
 import { motion } from "framer-motion";
 import profilePic from "../assets/images/profilePic.jpg";
 import profilePicBack from "../assets/images/profilePicBack.png";
-import resume from "../assets/Rajveer_CyberSecurity_Analyst.pdf";
+import resume from "../assets/RAJVEER_Security_Analyst.pdf";
 
 
 const Hero = () => {
