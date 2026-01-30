@@ -1,0 +1,78 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+body {
+  overflow-x: hidden;
+  background: #09090b;  /* fallback for old browsers */
+}
+
+html {
+  scroll-behavior: smooth;
+}
+
+::-webkit-scrollbar {
+  display: none;
+}
+
+.audiowide-regular {
+  font-family: "Audiowide", serif;
+  font-style: normal;
+}
+figure{
+  background: -webkit-linear-gradient(to right, #161616, #2f2f2f2f);  
+  background: linear-gradient(to right, #131313, #2f2f2f); 
+
+}
+
+.typing-effect {
+  display: inline-block;
+  overflow: hidden;
+  white-space: nowrap;
+  border-right: 3px solid #38bdf1; /* Cursor-like effect */
+  animation: typing 3.5s steps(20) 1s 1 normal both, blink 0.75s step-end 3.5s infinite;
+}
+
+/* Typing animation */
+@keyframes typing {
+  from {
+    width: 0;
+  }
+  to {
+    width: 100%;
+  }
+}
+
+/* Blinking cursor animation */
+@keyframes blink {
+  50% {
+    border-color: transparent;
+  }
+}
+/* In your CSS file or <style> tag */
+.terminal-link {
+  color: #66ff00; /* Green color for links */
+  text-decoration: none; /* Remove underline initially */
+}
+
+.terminal-link:hover {
+  text-decoration: underline; /* Add underline on hover */
+}
+
+.rotate-y-180 {
+  transform: rotateZ(180deg) scale(250%);
+  filter: contrast(150%);
+}
+
+.popin {
+  animation: popin 0.5s ease-in-out;
+}
+
+@keyframes popin {
+  from {
+    transform: translate(-100%);
+  }
+  to {
+    transform: translate(0%);
+  }
+}
