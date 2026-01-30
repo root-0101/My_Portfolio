@@ -119,7 +119,7 @@ const WallOfFame = () => {
 
                     <div
                         ref={scrollRef}
-                        className="flex overflow-x-auto gap-8 scroll-smooth no-scrollbar px-10 py-6"
+                        className="flex overflow-x-auto gap-6 sm:gap-8 scroll-smooth no-scrollbar px-4 sm:px-10 py-6"
                         style={{ scrollbarWidth: 'none', msOverflowStyle: 'none' }}
                     >
                         {wallOfFameData.map((item) => (
@@ -182,9 +182,9 @@ const WallOfFame = () => {
                             <X size={24} />
                         </button>
 
-                        <div className="flex flex-col md:flex-row h-full max-h-[85vh]">
+                        <div className="flex flex-col lg:flex-row h-full max-h-[90vh]">
                             {/* Left Side: Screenshot */}
-                            <div className="md:w-1/2 w-full bg-black/40 flex items-center justify-center border-b md:border-b-0 md:border-r border-gray-800 overflow-hidden p-4 group/image relative cursor-zoom-in"
+                            <div className="lg:w-1/2 w-full bg-black/40 flex items-center justify-center border-b lg:border-b-0 lg:border-r border-gray-800 overflow-hidden p-4 group/image relative cursor-zoom-in min-h-[250px] sm:min-h-[350px]"
                                 onClick={() => setIsZoomed(true)}
                             >
                                 <img
@@ -198,7 +198,7 @@ const WallOfFame = () => {
                             </div>
 
                             {/* Right Side: Details */}
-                            <div className="md:w-1/2 w-full p-8 md:p-12 overflow-y-auto custom-scrollbar">
+                            <div className="lg:w-1/2 w-full p-6 sm:p-8 md:p-12 overflow-y-auto custom-scrollbar">
                                 <div className="flex items-center gap-4 mb-6">
                                     <div className="flex items-center justify-start h-16 w-auto max-w-[240px]">
                                         <img src={selectedAchievement.logo} alt={selectedAchievement.company} className="h-full w-auto object-contain rounded-xl" />

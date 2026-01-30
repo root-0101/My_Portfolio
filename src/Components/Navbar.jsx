@@ -31,8 +31,8 @@ function Navbar() {
       <nav className={`fixed top-0 left-0 w-full h-20 px-6 md:px-12 flex items-center justify-between z-50 transition-all duration-300 ${scrolled ? "bg-[#040711]/80 backdrop-blur-xl border-b border-white/10 shadow-[0_0_20px_rgba(56,189,241,0.1)]" : "bg-transparent"
         }`}>
         {/* Left Section: Branding */}
-        <div className="flex items-center gap-3">
-          <div className="relative group">
+        <Link to="/" className="flex items-center gap-3 group">
+          <div className="relative">
             <div className="absolute -inset-0.5 bg-gradient-to-r from-[#38bdf8] to-blue-600 rounded-full blur opacity-30 group-hover:opacity-75 transition duration-500"></div>
             <img
               src={profilePicture}
@@ -41,15 +41,13 @@ function Navbar() {
             />
           </div>
           <span className="hidden sm:block">
-            <Link to="/">
-              <img
-                src="https://readme-typing-svg.demolab.com?font=Orbitron&weight=500&size=20&duration=3000&pause=1000&color=FFFFFF&vCenter=true&width=150&lines=sl3uth"
-                alt="branding"
-                className="h-8"
-              />
-            </Link>
+            <img
+              src="https://readme-typing-svg.demolab.com?font=Orbitron&weight=500&size=20&duration=3000&pause=1000&color=FFFFFF&vCenter=true&width=150&lines=sl3uth"
+              alt="branding"
+              className="h-8"
+            />
           </span>
-        </div>
+        </Link>
 
         {/* Center Section: Navigation Links */}
         <div className="hidden lg:flex items-center gap-1 bg-white/5 p-1 rounded-full border border-white/10 backdrop-blur-md">
@@ -101,8 +99,16 @@ function Navbar() {
         </div>
 
         {/* Mobile Dropdown */}
-        {drop && <Dropdown setDrop={setDrop} />}
+        <Dropdown isVisible={drop} onClose={() => setDrop(false)} />
       </nav>
+
+      {/* Overlay for mobile menu */}
+      {drop && (
+        <div
+          className="fixed inset-0 bg-black/60 backdrop-blur-sm z-[45] lg:hidden"
+          onClick={() => setDrop(false)}
+        />
+      )}
     </>
   );
 }

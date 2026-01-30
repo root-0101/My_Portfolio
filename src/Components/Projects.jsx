@@ -7,7 +7,7 @@ const firstRow = skills.slice(0, skills.length);
 
 const ReviewCard = ({ img, title, description, github }) => {
   return (
-    <figure className="relative h-72 w-80 cursor-pointer overflow-hidden rounded-xl border p-4 border-gray-950/[.1] bg-gray-950/[.01] hover:bg-gray-950/[.05] dark:border-gray-50/[.1] dark:bg-gray-50/[.10] dark:hover:bg-gray-50/[.15] m-4 hover:scale-105 transition-all duration-300 hover:border hover:border-[#31519f] shrink-0">
+    <figure className="relative h-72 w-[280px] sm:w-80 cursor-pointer overflow-hidden rounded-xl border p-4 border-gray-950/[.1] bg-gray-950/[.01] hover:bg-gray-950/[.05] dark:border-gray-50/[.1] dark:bg-gray-50/[.10] dark:hover:bg-gray-50/[.15] m-4 hover:scale-105 transition-all duration-300 hover:border hover:border-[#31519f] shrink-0">
       <div className="w-full h-full flex flex-col items-center justify-around gap-2">
         <div className="w-full h-[40%] flex flex-col items-center justify-between">
           <img src={img} alt={title} className="h-16 rounded-xl" />
@@ -56,7 +56,7 @@ export default function Projects() {
 
           <div
             ref={scrollRef}
-            className="flex overflow-x-auto gap-4 scroll-smooth no-scrollbar px-12 pb-4"
+            className="flex overflow-x-auto gap-2 sm:gap-4 scroll-smooth no-scrollbar px-10 sm:px-12 pb-4"
             style={{ scrollbarWidth: 'none', msOverflowStyle: 'none' }}
           >
             {firstRow.map((review, index) => (

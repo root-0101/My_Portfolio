@@ -45,7 +45,7 @@ const Hero = () => {
           >
             <div className="absolute -inset-0.5 rounded-full opacity-75 group-hover:opacity-100 transition duration-500 blur"></div>
 
-            <div className="relative h-40 w-40 lg:h-56 lg:w-56 mx-auto rounded-full overflow-hidden border-4 border-white/10 transform transition-transform duration-700 group-hover:rotate-[360deg]">
+            <div className="relative h-40 w-40 md:h-48 md:w-48 lg:h-56 lg:w-56 mx-auto rounded-full overflow-hidden border-4 border-white/10 transform transition-transform duration-700 group-hover:rotate-[360deg]">
               <div className="absolute inset-0 transition-opacity duration-500 group-hover:opacity-0">
                 <img
                   src={profilePic}
@@ -71,12 +71,12 @@ const Hero = () => {
             transition={{ duration: 1, delay: 0.7 }}
           >
             <motion.h1
-              className="text-xl sm:text-2xl md:text-3xl lg:text-4xl font-bold text-[#38bdf1] leading-tight"
+              className="text-2xl sm:text-2xl md:text-3xl lg:text-4xl font-bold text-[#38bdf1] leading-tight"
               initial={{ opacity: 0 }}
               animate={{ opacity: 1 }}
               transition={{ duration: 1 }}
             >
-              <span className="text-2xl">HEY👋, I AM RAJVEER</span>
+              <span className="">HEY👋, I AM RAJVEER</span>
             </motion.h1>
           </motion.div>
 
